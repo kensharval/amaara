@@ -45,42 +45,47 @@ func main () {
 			continue
 		}
 
-		noOfSpelling, errY := strconv.Atoi (parts [1])
+		quantity, errY := strconv.Atoi (parts [1])
 		if errY != nil {
-			e := err.New ("Error: number of spelling may be too high.", nil, nil, errY)
+			e := err.New ("Error: number of spelling may be too high.", nil,
+				nil, errY)
 			fmt.Println (errLib.Fup (e))
 			continue
 		}
 
-		for x := 1; x <= noOfSpelling; x ++ {
-			sound, errZ := newton.Name (parts [0])
+		for x := 1; x <= quantity; x ++ {
+			name, errZ := newton.Name_Rand (parts [0])
 			if errZ != nil {
-				e := err.New ("Generation of a name failed: unable to obtain sound needed to generate the name.", nil, nil, errZ)
+				e := err.New ("Generation of a name failed: unable to " +
+					"obtain a name.", nil, nil, errZ)
 				fmt.Println (errLib.Fup (e))
 				continue
 			}
 
-			spellings, errA := newton.Spelling (sound, 8)
+			name.Polish ()
+
+			spellings, errA := name.Spelling (8)
 			if errA != nil {
-				e := err.New ("Generate of a name failed: unable to obtain spelling of the name's sound.", nil, nil, errA)
+				e := err.New ("Generate of a name failed: unable to " +
+					"obtain spelling of the name sound.", nil, nil,
+					errA)
 				fmt.Println (errLib.Fup (e))
 				continue
 			}
 
-			o := fmt.Sprintf ("%s:  %v", sound, spellings)
+			o := fmt.Sprintf ("%s:  %v", name.String (), spellings)
 			fmt.Println (o)
 		}
 	}
-}
-var (
+}; var (
 	i = bufio.NewReader (os.Stdout)
 	inputPattern *regexp.Regexp
-)
-func init () {
+); func init () {
 	var errX error
 	inputPattern, errX = regexp.Compile (`^[cve]+ [1-9][\d]*$`)
 	if errX != nil {
-		e := err.New ("Startup failed: regular expression compilation failed.", nil, nil, errX)
+		e := err.New ("Startup failed: regular expression compilation failed.",
+			nil, nil, errX)
 		fmt.Println (e)
 		os.Exit (1)
 	}

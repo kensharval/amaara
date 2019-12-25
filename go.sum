@@ -12,6 +12,8 @@ github.com/qamarian-lib/err v0.4.0 h1:YHcaxRLQxgz/JXyWVqequ4oix/FaM+X++GC1m5yzpj
 github.com/qamarian-lib/err v0.4.0/go.mod h1:KWdivfZyYkxtymEoylzvISmmCEua4/zCNcUppLA0zxg=
 github.com/qamarian-lib/newton v0.2.0 h1:HjxxpiuWxVkddOpYtGcZ7DBUdYf8EE1AbH8W5ptOCLg=
 github.com/qamarian-lib/newton v0.2.0/go.mod h1:xn2VC+HZz9YJOAp0/gEZ46a4i+vIAb0tat9N7tWv9Tc=
+github.com/qamarian-lib/newton v0.3.0 h1:ZL0EuQZiBfMoOnqCxSjxcJLvs0/VTyj6JXawnqopNK8=
+github.com/qamarian-lib/newton v0.3.0/go.mod h1:xn2VC+HZz9YJOAp0/gEZ46a4i+vIAb0tat9N7tWv9Tc=
 golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223 h1:DH4skfRX4EBpamg7iV4ZlCpblAHI6s6TDM39bFZumv8=
 golang.org/x/sys v0.0.0-20190222072716-a9d3bda3a223/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 gopkg.in/mgutz/ansi.v0 v0.0.0-20170206155736-9520e82c474b h1:yiGFS4XxFu/yT6fonHx8Y+GJim2/xDY4kDD56xnw2dg=
